@@ -68,7 +68,7 @@ class Users
 	end
 end
 
-z = MovieData.new("/Users/sharat/mydev/ml-100k/pa2/", "u1.test")
+z = MovieData.new("/Users/sharat/mydev/pa2/ml-100k/", "u1.test")
 #puts Users.users_db.inspect
 #z.rating(1, 6)
 #z.movies(1)
