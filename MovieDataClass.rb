@@ -2,7 +2,7 @@
 require_relative 'MovieClass'
 require_relative 'UserClass'
 require_relative 'MovieTestClass'
-#require 'debugger'
+require 'debugger'
 
 class MovieData
 
@@ -68,7 +68,7 @@ class MovieData
 		end
 		#puts simlist
 		sorted = simlist.sort_by! { |item| item.values}.reverse
-		return sorted#[0...100]
+		return sorted#[0...1000]
 	end
 	def predict(u, m) #find the user who is most similar to u and choose the value that he/she chose
 		@database = Hash.new
@@ -109,6 +109,7 @@ class MovieData
 				t.input(user.to_i, key.to_i, value.to_i, prediction)
 			end
 		end
+		#debugger
 		puts "Time elapsed #{(@end_time - @beginning_time)*1000} milliseconds"
 		puts "Mean: #{t.mean}"
 		puts "Standard Deviation: #{t.stddev}"

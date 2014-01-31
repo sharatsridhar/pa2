@@ -19,12 +19,12 @@ class MovieTest
 	def stddev
 		#debugger
 		sum = 0
-		mean = mean
+		avg = mean
 		@results.each do |u, m, r, p|
 			diff = r - p
-			sum += (diff - mean.to_f)**2
+			sum += (diff - avg.to_f)**2
 		end
-		puts sum
+		#puts sum
 		return Math.sqrt(sum / (@results.length))
 	end
 	def rms
